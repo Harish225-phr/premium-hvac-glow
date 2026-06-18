@@ -107,17 +107,22 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" /> 24/7 Emergency HVAC Service
           </span>
           <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
-            Comfort You Can Feel. <span className="text-gradient">Service You Can Trust.</span>
+            Reliable HVAC Services <span className="text-gradient">You Can Trust.</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
-            Pittsburgh's premium heating, cooling & air quality experts. Same-day service, upfront pricing, and a 100% satisfaction guarantee — backed by 1,800+ five-star reviews.
+            Professional heating, cooling, ventilation, repair, installation & maintenance services for homes and businesses across Greater Pittsburgh.
           </p>
+          <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2 max-w-2xl text-white/90 text-sm">
+            {["Licensed Technicians","Fast Response Times","Residential & Commercial","Energy Efficient Solutions","24/7 Emergency HVAC Support"].map(f => (
+              <li key={f} className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent" /> {f}</li>
+            ))}
+          </ul>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild variant="cta" size="xl">
-              <a href="tel:+14126282207"><Phone className="w-5 h-5" /> Call Now: (412) 628-2207</a>
+              <Link to="/contact">Get Free Estimate <ArrowRight className="w-5 h-5" /></Link>
             </Button>
             <Button asChild variant="hero" size="xl">
-              <Link to="/contact">Get Free Estimate <ArrowRight className="w-5 h-5" /></Link>
+              <a href="tel:+14126282207"><Phone className="w-5 h-5" /> Call Now: (412) 628-2207</a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
@@ -264,7 +269,7 @@ function ServiceAreas() {
         <div className="relative rounded-3xl overflow-hidden shadow-elegant aspect-[4/3]">
           <iframe
             title="Service area map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-105.30%2C39.55%2C-104.70%2C39.90&layer=mapnik"
+           src="https://www.google.com/maps?q=Pittsburgh,PA&output=embed"
             className="w-full h-full border-0"
             loading="lazy"
           />
