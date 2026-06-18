@@ -37,9 +37,16 @@ function ContactPage() {
                 <div className="min-w-0"><div className="text-sm text-muted-foreground">{r.l}</div><div className="font-semibold text-primary">{r.v}</div></div>
               </a>
             ))}
-            <div className="rounded-2xl overflow-hidden shadow-card aspect-video">
-              <iframe title="Map" src="https://www.google.com/maps?q=Pittsburgh,PA&output=embed" className="w-full h-full border-0" loading="lazy" />
-            </div>
+          <div className="rounded-2xl overflow-hidden shadow-card aspect-video">
+  <iframe
+    title="Keller Heating And Cooling Location"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8002711232625!2d-80.33326!3d40.788404899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834656da46af8a1%3A0x875d20f8efee65c5!2sKeller%20Heating%20And%20Cooling%20LLC!5e0!3m2!1sen!2sus!4v1781763772775!5m2!1sen!2sus"
+    className="w-full h-full border-0"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
           </div>
           <form onSubmit={e=>{e.preventDefault();setSent(true);}} className="glass-card rounded-3xl p-8 space-y-4 h-fit">
             <h2 className="text-2xl font-bold text-primary">Request Free Estimate</h2>

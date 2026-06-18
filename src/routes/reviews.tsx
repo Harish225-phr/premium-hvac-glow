@@ -2,14 +2,57 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
-
 const reviews = [
-  { n: "Sarah M.", c: "Pittsburgh", t: "Excellent service and professional technicians. Highly recommended." },
-  { n: "Marcus L.", c: "Allegheny County", t: "Quick response and quality HVAC installation. Couldn't be happier with the work." },
-  { n: "Priya R.", c: "Beaver County", t: "Reliable company with fair pricing and great customer service." },
-  { n: "Daniel K.", c: "Washington County", t: "Best contractor experience I've ever had. Clean, courteous, and they explained every detail." },
-  { n: "Anika T.", c: "Mt. Lebanon", t: "Installed a new HVAC + air purifier. My allergies are dramatically better. Highly recommend." },
-  { n: "Roberto S.", c: "Monroeville", t: "Came out late at night for an emergency no-heat call in January. Lifesavers." },
+  {
+    n: "Jimmie Lee DiIanni",
+    c: "Beaver Falls, PA",
+    t: "Our heat went out during a cold spell and Keller Heating & Cooling responded immediately. The issue was diagnosed and repaired quickly. Excellent service."
+  },
+  {
+    n: "Dave Presto",
+    c: "Pennsylvania",
+    t: "As a Mechanical Engineer, I appreciate contractors who deliver knowledge, consistency, and strong work ethic. Keller Heating & Cooling exceeded expectations."
+  },
+  {
+    n: "Brandi Girting",
+    c: "Beaver County, PA",
+    t: "I've used Zach and his crew several times. They are always quick to respond, professional, knowledgeable, and fairly priced."
+  },
+  {
+    n: "Stewart Bangs",
+    c: "Beaver Falls, PA",
+    t: "Keller Heating & Cooling installed my new furnace within days of my call. Professional, efficient, and very neat work."
+  },
+  {
+    n: "Mazen El Ali",
+    c: "Pennsylvania",
+    t: "Zach was honest, responsive, and never tried to oversell. He handled urgent HVAC service quickly and professionally."
+  },
+  {
+    n: "Dalton Faith",
+    c: "Pennsylvania",
+    t: "Very professional and knowledgeable crew. They took time to explain everything and were transparent throughout the process."
+  },
+  {
+    n: "Mackenzie Fajtak",
+    c: "Beaver County, PA",
+    t: "When our heat stopped working, Keller Heating & Cooling arrived promptly, fixed the issue, and charged a fair price."
+  },
+  {
+    n: "Brady Young",
+    c: "Pennsylvania",
+    t: "Fast estimates, quick scheduling, fair pricing, and dependable emergency service. Highly recommended."
+  },
+  {
+    n: "Vindy F",
+    c: "Beaver Falls, PA",
+    t: "Zach fit my mother into a busy schedule, arrived in the evening, and fixed her heater issue. Professional and reasonably priced."
+  },
+  {
+    n: "Vincent Marcello",
+    c: "Beaver County, PA",
+    t: "Water heater replacement was completed within hours. Clean installation, new fittings, and no mess left behind."
+  }
 ];
 
 export const Route = createFileRoute("/reviews")({
