@@ -13,9 +13,9 @@ import afterImg from "@/assets/after.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NorthAir HVAC — Heating, Cooling & Air Quality Experts" },
+      { title: "Keller Heating And Cooling LLC — Heating, Cooling & Air Quality Experts" },
       { name: "description", content: "Premium HVAC contractor offering AC repair, heating installation, furnace service & indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured." },
-      { property: "og:title", content: "NorthAir HVAC — Heating & Cooling Experts" },
+      { property: "og:title", content: "Keller Heating And Cooling LLC — Heating & Cooling Experts" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -60,19 +60,19 @@ const process = [
 ];
 
 const reviews = [
-  { name: "Sarah M.", city: "Denver, CO", text: "Our AC died during a heatwave. They had a tech here in 90 minutes and a new system running by sundown. Truly premium service.", stars: 5 },
-  { name: "Marcus L.", city: "Aurora, CO", text: "Replaced our furnace and rebalanced ducts. House finally heats evenly. Honest pricing and zero pressure.", stars: 5 },
-  { name: "Priya R.", city: "Lakewood, CO", text: "Annual maintenance plan has saved us thousands. The team is professional, on-time, every visit.", stars: 5 },
+  { name: "Sarah M.", city: "Pittsburgh, PA", text: "Excellent service and professional technicians. They had a tech here in 90 minutes and a new system running by sundown. Highly recommended.", stars: 5 },
+  { name: "Marcus L.", city: "Allegheny County, PA", text: "Quick response and quality HVAC installation. House finally heats evenly. Honest pricing and zero pressure.", stars: 5 },
+  { name: "Priya R.", city: "Beaver County, PA", text: "Reliable company with fair pricing and great customer service. The team is professional, on-time, every visit.", stars: 5 },
 ];
 
-const cities = ["Denver", "Aurora", "Lakewood", "Centennial", "Boulder", "Littleton", "Arvada", "Westminster", "Thornton", "Englewood"];
+const cities = ["Pittsburgh", "Allegheny County", "Beaver County", "Washington County", "Mt. Lebanon", "Bethel Park", "Monroeville", "Cranberry Twp", "Wexford", "Moon Township"];
 
 const faqs = [
-  { q: "Do you offer 24/7 emergency HVAC service?", a: "Yes. Our emergency line is staffed around the clock with no overtime fees on evenings, weekends or holidays." },
-  { q: "Are your technicians licensed and insured?", a: "Every technician is NATE-certified, background checked, and we carry full liability and workers compensation insurance." },
-  { q: "Do you provide free estimates?", a: "Yes — all replacement and installation estimates are 100% free, with no obligation." },
-  { q: "What financing options are available?", a: "We offer 0% APR for 12 months and low-monthly-payment plans starting at $69/mo (on approved credit)." },
-  { q: "How quickly can you respond?", a: "Same-day service when booked before noon, and most emergency calls are on-site within 2 hours." },
+  { q: "How often should HVAC systems be serviced?", a: "At least twice a year — once in the spring for your AC and once in the fall for your heating — for optimal performance and energy efficiency." },
+  { q: "Do you provide emergency HVAC services?", a: "Yes. Emergency support is available with fast response times across Greater Pittsburgh area." },
+  { q: "Can you install energy-efficient systems?", a: "Yes. We provide modern, energy-efficient HVAC solutions that help reduce energy consumption and lower utility costs." },
+  { q: "Do you offer commercial HVAC services?", a: "Yes, we serve businesses of all sizes with HVAC installation, preventive maintenance, system upgrades and commercial repairs." },
+  { q: "Are your technicians licensed?", a: "Every Keller Heating And Cooling LLC technician is licensed, insured and committed to honest, dependable workmanship." },
 ];
 
 function HomePage() {
@@ -107,21 +107,26 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" /> 24/7 Emergency HVAC Service
           </span>
           <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
-            Comfort You Can Feel. <span className="text-gradient">Service You Can Trust.</span>
+            Reliable HVAC Services <span className="text-gradient">You Can Trust.</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
-            Denver's premium heating, cooling & air quality experts. Same-day service, upfront pricing, and a 100% satisfaction guarantee — backed by 1,800+ five-star reviews.
+            Professional heating, cooling, ventilation, repair, installation & maintenance services for homes and businesses across Greater Pittsburgh.
           </p>
+          <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2 max-w-2xl text-white/90 text-sm">
+            {["Licensed Technicians","Fast Response Times","Residential & Commercial","Energy Efficient Solutions","24/7 Emergency HVAC Support"].map(f => (
+              <li key={f} className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent" /> {f}</li>
+            ))}
+          </ul>
           <div className="mt-8 flex flex-wrap gap-4">
             <Button asChild variant="cta" size="xl">
-              <a href="tel:+15551234567"><Phone className="w-5 h-5" /> Call Now: (555) 123-4567</a>
+              <Link to="/contact">Get Free Estimate <ArrowRight className="w-5 h-5" /></Link>
             </Button>
             <Button asChild variant="hero" size="xl">
-              <Link to="/contact">Get Free Estimate <ArrowRight className="w-5 h-5" /></Link>
+              <a href="tel:+14126282207"><Phone className="w-5 h-5" /> Call Now: (412) 628-2207</a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
-            {[["12K+","Homes Served"],["4.9★","1,800+ Reviews"],["24/7","Emergency"]].map(([n,l])=> (
+            {[["1K+","Homes Served"],["4.9★","150+ Reviews"],["24/7","Emergency"]].map(([n,l])=> (
               <div key={l} className="glass-dark rounded-xl p-4 text-center">
                 <div className="text-2xl md:text-3xl font-bold font-display">{n}</div>
                 <div className="text-xs md:text-sm text-white/70 mt-1">{l}</div>
@@ -180,7 +185,7 @@ function WhyChoose() {
   return (
     <section className="section bg-surface-soft">
       <div className="container-px mx-auto max-w-7xl">
-        <SectionHead eyebrow="Why Choose NorthAir" title="The Premium Standard in HVAC Service" sub="What you get with every single visit — no exceptions." />
+        <SectionHead eyebrow="Why Choose Keller Heating & Cooling" title="The Premium Standard in HVAC Service" sub="What you get with every single visit — no exceptions." />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {why.map(w => (
             <div key={w.title} className="glass-card rounded-2xl p-6 hover-lift">
@@ -224,7 +229,7 @@ function Reviews() {
   return (
     <section className="section bg-surface-soft">
       <div className="container-px mx-auto max-w-7xl">
-        <SectionHead eyebrow="Reviews" title="Loved by 12,000+ Homeowners" sub="Real reviews from real customers across the Denver metro." />
+        <SectionHead eyebrow="Reviews" title="Loved by 1,000+ Homeowners" sub="Real reviews from real customers across Greater Pittsburgh." />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {reviews.map(r => (
             <Card key={r.name} className="p-7 rounded-2xl border-border/60 hover-lift">
@@ -249,7 +254,7 @@ function ServiceAreas() {
     <section className="section">
       <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <SectionHead align="left" eyebrow="Service Area" title="Proudly Serving the Denver Metro" sub="Same-day service in 30+ neighborhoods across Colorado's Front Range." />
+          <SectionHead align="left" eyebrow="Service Area" title="Proudly Serving the Pittsburgh Metro" sub="Same-day service in 30+ neighborhoods across the Greater Pittsburgh area." />
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2">
             {cities.map(c => (
               <Link key={c} to="/service-area" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-soft hover:bg-teal/10 text-sm font-medium text-primary transition-colors">
@@ -264,7 +269,7 @@ function ServiceAreas() {
         <div className="relative rounded-3xl overflow-hidden shadow-elegant aspect-[4/3]">
           <iframe
             title="Service area map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-105.30%2C39.55%2C-104.70%2C39.90&layer=mapnik"
+           src="https://www.google.com/maps?q=Pittsburgh,PA&output=embed"
             className="w-full h-full border-0"
             loading="lazy"
           />
@@ -365,7 +370,7 @@ function CTABanner() {
             <h2 className="text-3xl md:text-5xl font-bold">Need HVAC Service Today?</h2>
             <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">Our emergency techs are standing by 24/7. No overtime fees. No surprises.</p>
             <Button asChild variant="cta" size="xl" className="mt-8">
-              <a href="tel:+15551234567"><Phone className="w-5 h-5" /> Call (555) 123-4567 Now</a>
+              <a href="tel:+14126282207"><Phone className="w-5 h-5" /> Call (412) 628-2207 Now</a>
             </Button>
           </div>
         </div>
@@ -381,8 +386,8 @@ function Contact() {
         <div>
           <SectionHead align="left" eyebrow="Get In Touch" title="Request a Free Estimate" sub="Tell us about your project and we'll get back to you within 30 minutes during business hours." />
           <div className="mt-8 space-y-5">
-            <InfoRow icon={Phone} label="Phone" value="(555) 123-4567" href="tel:+15551234567" />
-            <InfoRow icon={MapPin} label="Address" value="1450 Industrial Pkwy, Denver CO 80216" />
+            <InfoRow icon={Phone} label="Phone" value="(412) 628-2207" href="tel:+14126282207" />
+            <InfoRow icon={MapPin} label="Service Area" value="Pittsburgh, PA & Surrounding Areas" />
             <InfoRow icon={Clock} label="Business Hours" value="Mon–Sun · 24/7 Emergency Service" />
           </div>
         </div>

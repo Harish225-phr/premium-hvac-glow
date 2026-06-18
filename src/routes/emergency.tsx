@@ -6,16 +6,16 @@ import { Phone, Siren, Clock, ShieldCheck } from "lucide-react";
 export const Route = createFileRoute("/emergency")({
   head: () => ({
     meta: [
-      { title: "24/7 Emergency HVAC Service in Denver | NorthAir HVAC" },
-      { name: "description", content: "Furnace down or AC broken? Call NorthAir HVAC 24/7. No overtime fees, fast on-site response across the Denver metro." },
-      { property: "og:title", content: "Emergency HVAC Service | NorthAir" }, { property: "og:url", content: "/emergency" },
+      { title: "24/7 Emergency HVAC Service in Pittsburgh | Keller Heating And Cooling LLC" },
+      { name: "description", content: "Furnace down or AC broken? Call Keller Heating And Cooling LLC 24/7. No overtime fees, fast on-site response across Greater Pittsburgh." },
+      { property: "og:title", content: "Emergency HVAC Service | Keller Heating & Cooling" }, { property: "og:url", content: "/emergency" },
     ],
     links: [{ rel: "canonical", href: "/emergency" }],
   }),
   component: () => (
     <>
       <PageHero eyebrow="Emergency" title="24/7 Emergency HVAC Service" sub="No heat? No cooling? Strange smells or sounds? Call us now — real humans answering, real techs dispatched within the hour.">
-        <Button asChild variant="cta" size="xl"><a href="tel:+15551234567"><Phone className="w-5 h-5" /> Call (555) 123-4567</a></Button>
+        <Button asChild variant="cta" size="xl"><a href="tel:+14126282207"><Phone className="w-5 h-5" /> Call (412) 628-2207</a></Button>
       </PageHero>
       <section className="section">
         <div className="container-px mx-auto max-w-5xl grid sm:grid-cols-3 gap-5">

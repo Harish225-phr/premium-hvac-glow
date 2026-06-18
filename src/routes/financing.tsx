@@ -13,9 +13,9 @@ const plans = [
 export const Route = createFileRoute("/financing")({
   head: () => ({
     meta: [
-      { title: "HVAC Financing — 0% APR Options | NorthAir HVAC" },
+      { title: "HVAC Financing — 0% APR Options | Keller Heating And Cooling LLC" },
       { name: "description", content: "Flexible HVAC financing with 0% APR and low monthly payments. Apply in minutes." },
-      { property: "og:title", content: "HVAC Financing | NorthAir" }, { property: "og:url", content: "/financing" },
+      { property: "og:title", content: "HVAC Financing | Keller Heating & Cooling" }, { property: "og:url", content: "/financing" },
     ],
     links: [{ rel: "canonical", href: "/financing" }],
   }),

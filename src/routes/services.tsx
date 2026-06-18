@@ -20,9 +20,9 @@ const services = [
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "HVAC Services — AC, Heating, Furnace & Air Quality | NorthAir" },
+      { title: "HVAC Services — AC, Heating, Furnace & Air Quality | Keller Heating & Cooling" },
       { name: "description", content: "Complete HVAC services: AC installation & repair, heating, furnace, duct cleaning, indoor air quality and 24/7 emergency service." },
-      { property: "og:title", content: "HVAC Services | NorthAir HVAC" }, { property: "og:url", content: "/services" },
+      { property: "og:title", content: "HVAC Services | Keller Heating And Cooling LLC" }, { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),

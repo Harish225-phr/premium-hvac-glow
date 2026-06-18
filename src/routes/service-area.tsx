@@ -2,31 +2,31 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { MapPin } from "lucide-react";
 
-const cities = ["Denver","Aurora","Lakewood","Centennial","Boulder","Littleton","Arvada","Westminster","Thornton","Englewood","Wheat Ridge","Golden","Broomfield","Commerce City","Northglenn","Parker","Highlands Ranch","Castle Rock","Erie","Louisville"];
+const cities = ["Pittsburgh","Allegheny County","Beaver County","Washington County","Mt. Lebanon","Bethel Park","Monroeville","Cranberry Township","Wexford","Moon Township","McCandless","Ross Township","Shaler","Penn Hills","Plum","Upper St. Clair","Robinson","South Hills","North Hills","Nearby Areas"];
 
 export const Route = createFileRoute("/service-area")({
   head: () => ({
     meta: [
-      { title: "HVAC Service Area — Denver Metro & Front Range | NorthAir" },
-      { name: "description", content: "NorthAir HVAC serves 30+ cities across the Denver metro and Colorado Front Range. Same-day service available." },
-      { property: "og:title", content: "HVAC Service Area | NorthAir" }, { property: "og:url", content: "/service-area" },
+      { title: "HVAC Service Area — Pittsburgh & Surrounding Areas | Keller Heating & Cooling" },
+      { name: "description", content: "Keller Heating And Cooling LLC serves 30+ cities across the Greater Pittsburgh region. Same-day service available." },
+      { property: "og:title", content: "HVAC Service Area | Keller Heating & Cooling" }, { property: "og:url", content: "/service-area" },
     ],
     links: [{ rel: "canonical", href: "/service-area" }],
   }),
   component: () => (
     <>
-      <PageHero eyebrow="Service Area" title="Serving the Entire Denver Metro" sub="Same-day HVAC service across 30+ Front Range cities and neighborhoods." />
+      <PageHero eyebrow="Service Area" title="Serving the Greater Pittsburgh Area" sub="Reliable HVAC service across Pittsburgh, Allegheny County, Beaver County, Washington County and nearby areas." />
       <section className="section">
         <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-start">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {cities.map(c=> (
               <div key={c} className="flex items-center gap-2 px-4 py-3 rounded-lg bg-surface-soft hover:bg-teal/10 text-sm font-medium text-primary">
-                <MapPin className="w-4 h-4 text-teal" /> {c}, CO
+                <MapPin className="w-4 h-4 text-teal" /> {c}, PA
               </div>
             ))}
           </div>
           <div className="rounded-3xl overflow-hidden shadow-elegant aspect-square">
-            <iframe title="Service map" src="https://www.openstreetmap.org/export/embed.html?bbox=-105.30%2C39.55%2C-104.70%2C39.90&layer=mapnik" className="w-full h-full border-0" loading="lazy" />
+            <iframe title="Service map" src="https://www.google.com/maps?q=Pittsburgh,PA&output=embed" className="w-full h-full border-0" loading="lazy" />
           </div>
         </div>
       </section>
