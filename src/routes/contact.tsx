@@ -9,9 +9,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact NorthAir HVAC — Free Estimate & 24/7 Service" },
-      { name: "description", content: "Get a free HVAC estimate or call 24/7 for emergency service. NorthAir HVAC — Denver's trusted heating and cooling contractor." },
-      { property: "og:title", content: "Contact NorthAir HVAC" }, { property: "og:url", content: "/contact" },
+      { title: "Contact Keller Heating And Cooling LLC — Free Estimate & 24/7 Service" },
+      { name: "description", content: "Get a free HVAC estimate or call 24/7 for emergency service. Keller Heating And Cooling LLC — Pittsburgh's trusted heating and cooling contractor." },
+      { property: "og:title", content: "Contact Keller Heating And Cooling LLC" }, { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -27,9 +27,9 @@ function ContactPage() {
         <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12">
           <div className="space-y-5">
             {[
-              { i: Phone, l: "Phone", v: "(555) 123-4567", h: "tel:+15551234567" },
-              { i: Mail, l: "Email", v: "hello@northairhvac.com", h: "mailto:hello@northairhvac.com" },
-              { i: MapPin, l: "Office", v: "1450 Industrial Pkwy, Denver CO 80216" },
+              { i: Phone, l: "Phone", v: "(412) 628-2207", h: "tel:+14126282207" },
+              { i: Mail, l: "Email", v: "info@kellerheatingandcooling.com", h: "mailto:info@kellerheatingandcooling.com" },
+              { i: MapPin, l: "Office", v: "1450 Industrial Pkwy, Pittsburgh PA 15201" },
               { i: Clock, l: "Hours", v: "24/7 Emergency · Office Mon–Sat 7am–7pm" },
             ].map(r => (
               <a key={r.l} href={r.h ?? "#"} className="flex items-start gap-4 glass-card p-5 rounded-2xl hover-lift">

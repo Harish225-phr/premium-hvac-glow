@@ -22,7 +22,7 @@ export function SiteHeader() {
           <span className="inline-grid place-items-center w-10 h-10 rounded-xl gradient-primary text-white shadow-glow">
             <Snowflake className="w-5 h-5" />
           </span>
-          NorthAir HVAC
+          Keller Heating And Cooling LLC
         </Link>
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium">
           {nav.map(n => (
@@ -32,8 +32,8 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <a href="tel:+15551234567" className="flex items-center gap-2 text-sm font-semibold text-primary">
-            <Phone className="w-4 h-4 text-teal" /> (555) 123-4567
+          <a href="tel:+14126282207" className="flex items-center gap-2 text-sm font-semibold text-primary">
+            <Phone className="w-4 h-4 text-teal" /> (412) 628-2207
           </a>
           <Button asChild variant="cta" size="sm">
             <Link to="/contact">Free Estimate</Link>
@@ -51,8 +51,8 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
-            <a href="tel:+15551234567" className="flex items-center gap-2 font-semibold text-primary">
-              <Phone className="w-4 h-4" /> (555) 123-4567
+            <a href="tel:+14126282207" className="flex items-center gap-2 font-semibold text-primary">
+              <Phone className="w-4 h-4" /> (412) 628-2207
             </a>
           </div>
         </div>

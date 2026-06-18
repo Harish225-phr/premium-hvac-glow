@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div>
           <div className="flex items-center gap-2 font-display font-bold text-xl">
             <span className="inline-grid place-items-center w-10 h-10 rounded-xl bg-teal"><Snowflake className="w-5 h-5" /></span>
-            NorthAir HVAC
+            Keller Heating And Cooling LLC
           </div>
           <p className="mt-4 text-sm text-white/70 max-w-xs">Premium heating, cooling and indoor air quality services trusted by 12,000+ homes and businesses.</p>
           <div className="flex items-center gap-1 mt-4 text-accent">
@@ -39,16 +39,16 @@ export function SiteFooter() {
         <div>
           <h4 className="font-semibold mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-white/80">
-            <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 text-accent"/> <a href="tel:+15551234567">(555) 123-4567</a></li>
-            <li className="flex items-start gap-2"><Mail className="w-4 h-4 mt-0.5 text-accent"/> hello@northairhvac.com</li>
-            <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent"/> 1450 Industrial Pkwy, Denver CO</li>
+            <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 text-accent"/> <a href="tel:+14126282207">(412) 628-2207</a></li>
+            <li className="flex items-start gap-2"><Mail className="w-4 h-4 mt-0.5 text-accent"/> info@kellerheatingandcooling.com</li>
+            <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent"/> 1450 Industrial Pkwy, Pittsburgh CO</li>
             <li className="flex gap-3 pt-2 text-white/70"><Facebook className="w-5 h-5"/><Instagram className="w-5 h-5"/></li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="container-px mx-auto max-w-7xl py-5 text-xs text-white/60 flex flex-wrap justify-between gap-3">
-          <p>© {new Date().getFullYear()} NorthAir HVAC. Licensed · Bonded · Insured. License #HVAC-44892.</p>
+          <p>© {new Date().getFullYear()} Keller Heating And Cooling LLC. Licensed · Bonded · Insured. License #HVAC-44892.</p>
           <p>24/7 Emergency Service Available</p>
         </div>
       </div>
