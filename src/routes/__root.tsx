@@ -11,6 +11,9 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteHeader } from "../components/SiteHeader";
+import { SiteFooter } from "../components/SiteFooter";
+import { StickyContact } from "../components/StickyContact";
 
 function NotFoundComponent() {
   return (
@@ -77,21 +80,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "NorthAir HVAC — Premium Heating & Cooling Services" },
+      { name: "description", content: "Trusted local HVAC contractor for AC repair, heating, furnace and indoor air quality. 24/7 emergency service. Free estimates. Licensed & insured." },
+      { name: "author", content: "NorthAir HVAC" },
+      { property: "og:title", content: "NorthAir HVAC — Premium Heating & Cooling Services" },
+      { property: "og:description", content: "Trusted local HVAC contractor. 24/7 emergency service, free estimates, licensed & insured." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "NorthAir HVAC" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" },
     ],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "HVACBusiness",
+        name: "NorthAir HVAC",
+        telephone: "+1-555-123-4567",
+        email: "hello@northairhvac.com",
+        address: { "@type": "PostalAddress", streetAddress: "1450 Industrial Pkwy", addressLocality: "Denver", addressRegion: "CO", postalCode: "80216", addressCountry: "US" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "1832" },
+        openingHours: "Mo-Su 00:00-23:59",
+      }),
+    }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -118,8 +134,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteHeader />
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+      <SiteFooter />
+      <StickyContact />
     </QueryClientProvider>
   );
 }
