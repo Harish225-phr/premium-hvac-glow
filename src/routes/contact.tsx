@@ -29,7 +29,7 @@ function ContactPage() {
             {[
               { i: Phone, l: "Phone", v: "(412) 628-2207", h: "tel:+14126282207" },
               { i: Mail, l: "Email", v: "info@kellerheatingandcooling.com", h: "mailto:info@kellerheatingandcooling.com" },
-              { i: MapPin, l: "Office", v: "1450 Industrial Pkwy, Pittsburgh PA 15201" },
+              { i: MapPin, l: "Office", v: "Pittsburgh, PA" },
               { i: Clock, l: "Hours", v: "24/7 Emergency · Office Mon–Sat 7am–7pm" },
             ].map(r => (
               <a key={r.l} href={r.h ?? "#"} className="flex items-start gap-4 glass-card p-5 rounded-2xl hover-lift">
@@ -38,7 +38,7 @@ function ContactPage() {
               </a>
             ))}
             <div className="rounded-2xl overflow-hidden shadow-card aspect-video">
-              <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=-105.00%2C39.74%2C-104.92%2C39.78&layer=mapnik" className="w-full h-full border-0" loading="lazy" />
+              <iframe title="Map" src="https://www.google.com/maps?q=Pittsburgh,PA&output=embed" className="w-full h-full border-0" loading="lazy" />
             </div>
           </div>
           <form onSubmit={e=>{e.preventDefault();setSent(true);}} className="glass-card rounded-3xl p-8 space-y-4 h-fit">

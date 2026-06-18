@@ -26,7 +26,7 @@ export const Route = createFileRoute("/service-area")({
             ))}
           </div>
           <div className="rounded-3xl overflow-hidden shadow-elegant aspect-square">
-            <iframe title="Service map" src="https://www.openstreetmap.org/export/embed.html?bbox=-105.30%2C39.55%2C-104.70%2C39.90&layer=mapnik" className="w-full h-full border-0" loading="lazy" />
+            <iframe title="Service map" src="https://www.google.com/maps?q=Pittsburgh,PA&output=embed" className="w-full h-full border-0" loading="lazy" />
           </div>
         </div>
       </section>

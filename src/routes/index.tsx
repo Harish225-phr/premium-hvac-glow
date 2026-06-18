@@ -387,7 +387,7 @@ function Contact() {
           <SectionHead align="left" eyebrow="Get In Touch" title="Request a Free Estimate" sub="Tell us about your project and we'll get back to you within 30 minutes during business hours." />
           <div className="mt-8 space-y-5">
             <InfoRow icon={Phone} label="Phone" value="(412) 628-2207" href="tel:+14126282207" />
-            <InfoRow icon={MapPin} label="Address" value="1450 Industrial Pkwy, Pittsburgh PA 15201" />
+            <InfoRow icon={MapPin} label="Address" value="Pittsburgh, PA" />
             <InfoRow icon={Clock} label="Business Hours" value="Mon–Sun · 24/7 Emergency Service" />
           </div>
         </div>

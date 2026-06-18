@@ -41,7 +41,7 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm text-white/80">
             <li className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 text-accent"/> <a href="tel:+14126282207">(412) 628-2207</a></li>
             <li className="flex items-start gap-2"><Mail className="w-4 h-4 mt-0.5 text-accent"/> info@kellerheatingandcooling.com</li>
-            <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent"/> 1450 Industrial Pkwy, Pittsburgh CO</li>
+            <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 text-accent"/> Pittsburgh, PA</li>
             <li className="flex gap-3 pt-2 text-white/70"><Facebook className="w-5 h-5"/><Instagram className="w-5 h-5"/></li>
           </ul>
         </div>
