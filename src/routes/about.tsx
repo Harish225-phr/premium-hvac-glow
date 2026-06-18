@@ -14,7 +14,7 @@ export const Route = createFileRoute("/about")({
   }),
   component: () => (
     <>
-      <PageHero eyebrow="Our Story" title="Family-owned. Customer-obsessed. NATE-certified." sub="Since 2008, Keller Heating & Cooling has delivered premium HVAC service to over 12,000 Pennsylvania homes and businesses." />
+      <PageHero eyebrow="Our Story" title="Family-owned. Customer-obsessed. NATE-certified." sub="Since 2008, Keller Heating & Cooling has delivered premium HVAC service to over 1,000 Pennsylvania homes and businesses." />
       <section className="section">
         <div className="container-px mx-auto max-w-5xl grid md:grid-cols-2 gap-12">
           <div>
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/about")({
             <p className="mt-6 text-muted-foreground leading-relaxed">Founded by master technician the Keller family, Keller Heating & Cooling began as a one-truck operation. Today, our 28-person team handles everything from emergency furnace calls to full commercial rooftop installations — with the same craftsmanship and care.</p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {[{i:Users,n:"28",l:"Team Members"},{i:Award,n:"15+",l:"Years in Business"},{i:ShieldCheck,n:"100%",l:"Licensed & Insured"},{i:HeartHandshake,n:"12K+",l:"Happy Customers"}].map(s=> (
+            {[{i:Users,n:"28",l:"Team Members"},{i:Award,n:"15+",l:"Years in Business"},{i:ShieldCheck,n:"100%",l:"Licensed & Insured"},{i:HeartHandshake,n:"1K+",l:"Happy Customers"}].map(s=> (
               <div key={s.l} className="glass-card rounded-2xl p-6 text-center hover-lift">
                 <s.i className="w-7 h-7 mx-auto text-teal" />
                 <div className="mt-3 text-3xl font-bold font-display text-primary">{s.n}</div>

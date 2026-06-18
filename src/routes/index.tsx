@@ -69,7 +69,7 @@ const cities = ["Pittsburgh", "Allegheny County", "Beaver County", "Washington C
 
 const faqs = [
   { q: "How often should HVAC systems be serviced?", a: "At least twice a year — once in the spring for your AC and once in the fall for your heating — for optimal performance and energy efficiency." },
-  { q: "Do you provide emergency HVAC services?", a: "Yes. Emergency support is available with fast response times across the Greater Pittsburgh area." },
+  { q: "Do you provide emergency HVAC services?", a: "Yes. Emergency support is available with fast response times across Greater Pittsburgh area." },
   { q: "Can you install energy-efficient systems?", a: "Yes. We provide modern, energy-efficient HVAC solutions that help reduce energy consumption and lower utility costs." },
   { q: "Do you offer commercial HVAC services?", a: "Yes, we serve businesses of all sizes with HVAC installation, preventive maintenance, system upgrades and commercial repairs." },
   { q: "Are your technicians licensed?", a: "Every Keller Heating And Cooling LLC technician is licensed, insured and committed to honest, dependable workmanship." },
@@ -126,7 +126,7 @@ function Hero() {
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
-            {[["12K+","Homes Served"],["4.9★","1,800+ Reviews"],["24/7","Emergency"]].map(([n,l])=> (
+            {[["1K+","Homes Served"],["4.9★","150+ Reviews"],["24/7","Emergency"]].map(([n,l])=> (
               <div key={l} className="glass-dark rounded-xl p-4 text-center">
                 <div className="text-2xl md:text-3xl font-bold font-display">{n}</div>
                 <div className="text-xs md:text-sm text-white/70 mt-1">{l}</div>
@@ -229,7 +229,7 @@ function Reviews() {
   return (
     <section className="section bg-surface-soft">
       <div className="container-px mx-auto max-w-7xl">
-        <SectionHead eyebrow="Reviews" title="Loved by 12,000+ Homeowners" sub="Real reviews from real customers across the Greater Pittsburgh." />
+        <SectionHead eyebrow="Reviews" title="Loved by 1,000+ Homeowners" sub="Real reviews from real customers across Greater Pittsburgh." />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {reviews.map(r => (
             <Card key={r.name} className="p-7 rounded-2xl border-border/60 hover-lift">

@@ -15,15 +15,15 @@ const reviews = [
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Reviews — 4.9★ from 1,800+ Customers | Keller Heating And Cooling LLC" },
-      { name: "description", content: "Read real reviews from Keller Heating And Cooling LLC customers across the Greater Pittsburgh. 4.9 star average from 1,800+ verified reviews." },
+      { title: "Reviews — 4.9★ from 150+ Customers | Keller Heating And Cooling LLC" },
+      { name: "description", content: "Read real reviews from Keller Heating And Cooling LLC customers across Greater Pittsburgh. 4.9 star average from 150+ verified reviews." },
       { property: "og:title", content: "Keller Heating And Cooling LLC Reviews" }, { property: "og:url", content: "/reviews" },
     ],
     links: [{ rel: "canonical", href: "/reviews" }],
   }),
   component: () => (
     <>
-      <PageHero eyebrow="Reviews" title="4.9★ from 1,800+ verified reviews" sub="Don't take our word for it — here's what your neighbors are saying." />
+      <PageHero eyebrow="Reviews" title="4.9★ from 150+ verified reviews" sub="Don't take our word for it — here's what your neighbors are saying." />
       <section className="section">
         <div className="container-px mx-auto max-w-7xl grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map(r => (

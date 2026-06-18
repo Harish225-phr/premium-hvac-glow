@@ -10,10 +10,10 @@ export function SiteFooter() {
             <span className="inline-grid place-items-center w-10 h-10 rounded-xl bg-teal"><Snowflake className="w-5 h-5" /></span>
             Keller Heating And Cooling LLC
           </div>
-          <p className="mt-4 text-sm text-white/70 max-w-xs">Premium heating, cooling and indoor air quality services trusted by 12,000+ homes and businesses.</p>
+          <p className="mt-4 text-sm text-white/70 max-w-xs">Premium heating, cooling and indoor air quality services trusted by 1,000+ homes and businesses.</p>
           <div className="flex items-center gap-1 mt-4 text-accent">
             {[...Array(5)].map((_,i)=><Star key={i} className="w-4 h-4 fill-current" />)}
-            <span className="ml-2 text-white/80 text-sm">4.9 / 5 · 1,800+ reviews</span>
+            <span className="ml-2 text-white/80 text-sm">4.9 / 5 · 150+ reviews</span>
           </div>
         </div>
         <div>

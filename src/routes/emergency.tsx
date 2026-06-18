@@ -7,7 +7,7 @@ export const Route = createFileRoute("/emergency")({
   head: () => ({
     meta: [
       { title: "24/7 Emergency HVAC Service in Pittsburgh | Keller Heating And Cooling LLC" },
-      { name: "description", content: "Furnace down or AC broken? Call Keller Heating And Cooling LLC 24/7. No overtime fees, fast on-site response across the Greater Pittsburgh." },
+      { name: "description", content: "Furnace down or AC broken? Call Keller Heating And Cooling LLC 24/7. No overtime fees, fast on-site response across Greater Pittsburgh." },
       { property: "og:title", content: "Emergency HVAC Service | Keller Heating & Cooling" }, { property: "og:url", content: "/emergency" },
     ],
     links: [{ rel: "canonical", href: "/emergency" }],
