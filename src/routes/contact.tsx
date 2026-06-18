@@ -29,7 +29,7 @@ function ContactPage() {
             {[
               { i: Phone, l: "Phone", v: "(412) 628-2207", h: "tel:+14126282207" },
               { i: Mail, l: "Email", v: "info@kellerheatingandcooling.com", h: "mailto:info@kellerheatingandcooling.com" },
-              { i: MapPin, l: "Office", v: "Pittsburgh, PA" },
+              { i: MapPin, l: "Service Area", v: "Pittsburgh, PA & Surrounding Areas" },
               { i: Clock, l: "Hours", v: "24/7 Emergency · Office Mon–Sat 7am–7pm" },
             ].map(r => (
               <a key={r.l} href={r.h ?? "#"} className="flex items-start gap-4 glass-card p-5 rounded-2xl hover-lift">
