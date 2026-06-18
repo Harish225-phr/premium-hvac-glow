@@ -4,12 +4,12 @@ import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
 const reviews = [
-  { n: "Sarah M.", c: "Pittsburgh", t: "AC died during a heatwave — they had a tech here in 90 minutes and a new system running by sundown. Truly premium." },
-  { n: "Marcus L.", c: "Aurora", t: "Replaced our furnace and rebalanced ducts. House finally heats evenly. Honest pricing and zero pressure." },
-  { n: "Priya R.", c: "Lakewood", t: "The maintenance plan has saved us thousands. Professional, on-time, every visit." },
-  { n: "Daniel K.", c: "Boulder", t: "Best contractor experience I've ever had. Clean, courteous, and they explained every detail." },
-  { n: "Anika T.", c: "Centennial", t: "Installed a new HVAC + UV air purifier. My allergies are dramatically better. Highly recommend." },
-  { n: "Roberto S.", c: "Littleton", t: "Came out at 2am for an emergency no-heat call in January. Lifesavers." },
+  { n: "Sarah M.", c: "Pittsburgh", t: "Excellent service and professional technicians. Highly recommended." },
+  { n: "Marcus L.", c: "Allegheny County", t: "Quick response and quality HVAC installation. Couldn't be happier with the work." },
+  { n: "Priya R.", c: "Beaver County", t: "Reliable company with fair pricing and great customer service." },
+  { n: "Daniel K.", c: "Washington County", t: "Best contractor experience I've ever had. Clean, courteous, and they explained every detail." },
+  { n: "Anika T.", c: "Mt. Lebanon", t: "Installed a new HVAC + air purifier. My allergies are dramatically better. Highly recommend." },
+  { n: "Roberto S.", c: "Monroeville", t: "Came out late at night for an emergency no-heat call in January. Lifesavers." },
 ];
 
 export const Route = createFileRoute("/reviews")({
