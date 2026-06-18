@@ -60,19 +60,19 @@ const process = [
 ];
 
 const reviews = [
-  { name: "Sarah M.", city: "Pittsburgh, PA", text: "Our AC died during a heatwave. They had a tech here in 90 minutes and a new system running by sundown. Truly premium service.", stars: 5 },
-  { name: "Marcus L.", city: "Aurora, PA", text: "Replaced our furnace and rebalanced ducts. House finally heats evenly. Honest pricing and zero pressure.", stars: 5 },
-  { name: "Priya R.", city: "Lakewood, PA", text: "Annual maintenance plan has saved us thousands. The team is professional, on-time, every visit.", stars: 5 },
+  { name: "Sarah M.", city: "Pittsburgh, PA", text: "Excellent service and professional technicians. They had a tech here in 90 minutes and a new system running by sundown. Highly recommended.", stars: 5 },
+  { name: "Marcus L.", city: "Allegheny County, PA", text: "Quick response and quality HVAC installation. House finally heats evenly. Honest pricing and zero pressure.", stars: 5 },
+  { name: "Priya R.", city: "Beaver County, PA", text: "Reliable company with fair pricing and great customer service. The team is professional, on-time, every visit.", stars: 5 },
 ];
 
-const cities = ["Pittsburgh", "Aurora", "Lakewood", "Centennial", "Boulder", "Littleton", "Arvada", "Westminster", "Thornton", "Englewood"];
+const cities = ["Pittsburgh", "Allegheny County", "Beaver County", "Washington County", "Mt. Lebanon", "Bethel Park", "Monroeville", "Cranberry Twp", "Wexford", "Moon Township"];
 
 const faqs = [
-  { q: "Do you offer 24/7 emergency HVAC service?", a: "Yes. Our emergency line is staffed around the clock with no overtime fees on evenings, weekends or holidays." },
-  { q: "Are your technicians licensed and insured?", a: "Every technician is NATE-certified, background checked, and we carry full liability and workers compensation insurance." },
-  { q: "Do you provide free estimates?", a: "Yes — all replacement and installation estimates are 100% free, with no obligation." },
-  { q: "What financing options are available?", a: "We offer 0% APR for 12 months and low-monthly-payment plans starting at $69/mo (on approved credit)." },
-  { q: "How quickly can you respond?", a: "Same-day service when booked before noon, and most emergency calls are on-site within 2 hours." },
+  { q: "How often should HVAC systems be serviced?", a: "At least twice a year — once in the spring for your AC and once in the fall for your heating — for optimal performance and energy efficiency." },
+  { q: "Do you provide emergency HVAC services?", a: "Yes. Emergency support is available with fast response times across the Greater Pittsburgh area." },
+  { q: "Can you install energy-efficient systems?", a: "Yes. We provide modern, energy-efficient HVAC solutions that help reduce energy consumption and lower utility costs." },
+  { q: "Do you offer commercial HVAC services?", a: "Yes, we serve businesses of all sizes with HVAC installation, preventive maintenance, system upgrades and commercial repairs." },
+  { q: "Are your technicians licensed?", a: "Every Keller Heating And Cooling LLC technician is licensed, insured and committed to honest, dependable workmanship." },
 ];
 
 function HomePage() {
