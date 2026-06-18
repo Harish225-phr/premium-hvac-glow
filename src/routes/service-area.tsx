@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { MapPin } from "lucide-react";
 
-const cities = ["Pittsburgh","Aurora","Lakewood","Centennial","Boulder","Littleton","Arvada","Westminster","Thornton","Englewood","Wheat Ridge","Golden","Broomfield","Commerce City","Northglenn","Parker","Highlands Ranch","Castle Rock","Erie","Louisville"];
+const cities = ["Pittsburgh","Allegheny County","Beaver County","Washington County","Mt. Lebanon","Bethel Park","Monroeville","Cranberry Township","Wexford","Moon Township","McCandless","Ross Township","Shaler","Penn Hills","Plum","Upper St. Clair","Robinson","South Hills","North Hills","Nearby Areas"];
 
 export const Route = createFileRoute("/service-area")({
   head: () => ({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/service-area")({
   }),
   component: () => (
     <>
-      <PageHero eyebrow="Service Area" title="Serving the Entire Pittsburgh Metro" sub="Same-day HVAC service across 30+ Greater Pittsburgh cities and neighborhoods." />
+      <PageHero eyebrow="Service Area" title="Serving the Greater Pittsburgh Area" sub="Reliable HVAC service across Pittsburgh, Allegheny County, Beaver County, Washington County and nearby areas." />
       <section className="section">
         <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-start">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
