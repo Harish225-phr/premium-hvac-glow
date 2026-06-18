@@ -254,7 +254,7 @@ function ServiceAreas() {
     <section className="section">
       <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <SectionHead align="left" eyebrow="Service Area" title="Proudly Serving the Pittsburgh Metro" sub="Same-day service in 30+ neighborhoods across Pennsylvania's Greater Pittsburgh." />
+          <SectionHead align="left" eyebrow="Service Area" title="Proudly Serving the Pittsburgh Metro" sub="Same-day service in 30+ neighborhoods across the Greater Pittsburgh area." />
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2">
             {cities.map(c => (
               <Link key={c} to="/service-area" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-soft hover:bg-teal/10 text-sm font-medium text-primary transition-colors">

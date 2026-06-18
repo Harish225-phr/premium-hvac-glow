@@ -7,8 +7,8 @@ const cities = ["Pittsburgh","Allegheny County","Beaver County","Washington Coun
 export const Route = createFileRoute("/service-area")({
   head: () => ({
     meta: [
-      { title: "HVAC Service Area — Pittsburgh Metro & Greater Pittsburgh | Keller Heating & Cooling" },
-      { name: "description", content: "Keller Heating And Cooling LLC serves 30+ cities across Greater Pittsburgh and Pennsylvania Greater Pittsburgh. Same-day service available." },
+      { title: "HVAC Service Area — Pittsburgh & Surrounding Areas | Keller Heating & Cooling" },
+      { name: "description", content: "Keller Heating And Cooling LLC serves 30+ cities across the Greater Pittsburgh region. Same-day service available." },
       { property: "og:title", content: "HVAC Service Area | Keller Heating & Cooling" }, { property: "og:url", content: "/service-area" },
     ],
     links: [{ rel: "canonical", href: "/service-area" }],
