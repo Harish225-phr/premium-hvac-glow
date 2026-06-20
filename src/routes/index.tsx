@@ -9,6 +9,7 @@ import { useState } from "react";
 import heroImg from "@/assets/hero-hvac.jpg";
 import beforeImg from "@/assets/before.jpg";
 import afterImg from "@/assets/after.jpg";
+import { LOCATIONS } from "@/data/seo-pages";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,15 +33,15 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: Snowflake, title: "AC Installation", desc: "High-efficiency cooling systems sized and installed for maximum comfort and lower energy bills." },
-  { icon: Wrench, title: "AC Repair", desc: "Fast, accurate diagnostics and same-day repairs on every major brand of air conditioner." },
-  { icon: Flame, title: "Heating Installation", desc: "Modern, ultra-quiet heating systems with smart thermostats and pro-grade workmanship." },
-  { icon: HardHat, title: "Heating Repair", desc: "Restore warmth quickly with experienced technicians and a 100% satisfaction guarantee." },
-  { icon: Flame, title: "Furnace Services", desc: "Tune-ups, repairs, and replacements that keep your furnace running safely all winter." },
-  { icon: Wind, title: "Duct Cleaning", desc: "Deep-clean ductwork to remove dust, allergens and contaminants for healthier air." },
-  { icon: Sparkles, title: "Indoor Air Quality", desc: "UV purifiers, HEPA filtration and humidity control engineered for your home." },
-  { icon: Building2, title: "Commercial HVAC", desc: "Rooftop units, RTU service, and preventative maintenance plans for businesses." },
-  { icon: Siren, title: "Emergency HVAC", desc: "24/7 emergency response with no overtime fees on nights, weekends or holidays." },
+  { icon: Snowflake, title: "AC Installation", slug: "ac-installation-beaver-falls-pa", desc: "High-efficiency cooling systems sized and installed for maximum comfort and lower energy bills." },
+  { icon: Wrench, title: "AC Repair", slug: "ac-repair-beaver-falls-pa", desc: "Fast, accurate diagnostics and same-day repairs on every major brand of air conditioner." },
+  { icon: Flame, title: "Heating Installation", slug: "heating-installation-beaver-falls-pa", desc: "Modern, ultra-quiet heating systems with smart thermostats and pro-grade workmanship." },
+  { icon: HardHat, title: "Heating Repair", slug: "heating-repair-beaver-falls-pa", desc: "Restore warmth quickly with experienced technicians and a 100% satisfaction guarantee." },
+  { icon: Flame, title: "Furnace Services", slug: "furnace-repair-beaver-falls-pa", desc: "Tune-ups, repairs, and replacements that keep your furnace running safely all winter." },
+  { icon: Wind, title: "Duct Cleaning", slug: "duct-cleaning-beaver-falls-pa", desc: "Deep-clean ductwork to remove dust, allergens and contaminants for healthier air." },
+  { icon: Sparkles, title: "Indoor Air Quality", slug: "indoor-air-quality-beaver-falls-pa", desc: "UV purifiers, HEPA filtration and humidity control engineered for your home." },
+  { icon: Building2, title: "Commercial HVAC", slug: "commercial-hvac-beaver-falls-pa", desc: "Rooftop units, RTU service, and preventative maintenance plans for businesses." },
+  { icon: Siren, title: "Emergency HVAC", slug: "emergency-hvac-beaver-falls-pa", desc: "24/7 emergency response with no overtime fees on nights, weekends or holidays." },
 ];
 
 const why = [
@@ -65,7 +66,7 @@ const reviews = [
   { name: "Dave Presto`", city: "Beaver County, PA", text: "As a Mechanical Engineer for a large international facilities management company, we source out a significant amount of work. It’s becoming rare to find Contractor’s anymore who deliver knowledge, consistency, and work ethic all in one package, but, that’s exactly what we experienced here with Zack, Skyler,  & Cody. Hardworking, dependable, and reliable from start to finish. In today’s industry, that level of commitment is very hard to come by. If you’re looking for a partner you can trust to get the job done right the first time, you’ll find it here. Reliability at its best! Keller Heating & Cooling 👍💪", stars: 5 },
 ];
 
-const cities = ["Pittsburgh", "Allegheny County", "Beaver County", "Washington County", "Mt. Lebanon", "Bethel Park", "Monroeville", "Cranberry Twp", "Wexford", "Moon Township"];
+const homeCities = LOCATIONS.slice(0, 10);
 
 const faqs = [
   { q: "How often should HVAC systems be serviced?", a: "At least twice a year — once in the spring for your AC and once in the fall for your heating — for optimal performance and energy efficiency." },
@@ -170,7 +171,7 @@ function Services() {
               </div>
               <h3 className="mt-5 text-xl font-bold text-primary">{s.title}</h3>
               <p className="mt-2 text-muted-foreground leading-relaxed">{s.desc}</p>
-              <Link to="/services" className="mt-5 inline-flex items-center gap-1 text-teal font-semibold text-sm group">
+              <Link to="/$slug" params={{ slug: s.slug }} className="mt-5 inline-flex items-center gap-1 text-teal font-semibold text-sm group">
                 Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Card>
@@ -256,9 +257,9 @@ function ServiceAreas() {
         <div>
           <SectionHead align="left" eyebrow="Service Area" title="Proudly Serving the Pittsburgh Metro" sub="Same-day service in 30+ neighborhoods across the Greater Pittsburgh area." />
           <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {cities.map(c => (
-              <Link key={c} to="/service-area" className="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-soft hover:bg-teal/10 text-sm font-medium text-primary transition-colors">
-                <MapPin className="w-4 h-4 text-teal" /> {c}
+            {homeCities.map(c => (
+              <Link key={c.slug} to="/$slug" params={{ slug: `ac-repair-${c.slug}-pa` }} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-soft hover:bg-teal/10 text-sm font-medium text-primary transition-colors">
+                <MapPin className="w-4 h-4 text-teal" /> {c.name}
               </Link>
             ))}
           </div>
