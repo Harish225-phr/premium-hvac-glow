@@ -1,6 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Snowflake, Facebook, Instagram, Star } from "lucide-react";
 
+const footerServices = [
+  { label: "AC Installation", slug: "ac-installation-beaver-falls-pa" },
+  { label: "AC Repair", slug: "ac-repair-beaver-falls-pa" },
+  { label: "Heating Repair", slug: "heating-repair-beaver-falls-pa" },
+  { label: "Furnace Repair", slug: "furnace-repair-beaver-falls-pa" },
+  { label: "Duct Cleaning", slug: "duct-cleaning-beaver-falls-pa" },
+  { label: "Emergency HVAC", slug: "emergency-hvac-beaver-falls-pa" },
+  { label: "Indoor Air Quality", slug: "indoor-air-quality-beaver-falls-pa" },
+  { label: "Commercial HVAC", slug: "commercial-hvac-beaver-falls-pa" },
+];
+
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground mt-20">
@@ -19,17 +30,16 @@ export function SiteFooter() {
         <div>
           <h4 className="font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-white/70">
-            <li><Link to="/services" className="hover:text-accent">AC Installation</Link></li>
-            <li><Link to="/services" className="hover:text-accent">AC Repair</Link></li>
-            <li><Link to="/services" className="hover:text-accent">Heating & Furnaces</Link></li>
-            <li><Link to="/services" className="hover:text-accent">Duct Cleaning</Link></li>
-            <li><Link to="/emergency" className="hover:text-accent">Emergency HVAC</Link></li>
+            {footerServices.map(s => (
+              <li key={s.slug}><Link to="/$slug" params={{ slug: s.slug }} className="hover:text-accent">{s.label}</Link></li>
+            ))}
           </ul>
         </div>
         <div>
           <h4 className="font-semibold mb-4">Company</h4>
           <ul className="space-y-2 text-sm text-white/70">
             <li><Link to="/about" className="hover:text-accent">About Us</Link></li>
+            <li><Link to="/services" className="hover:text-accent">All Services</Link></li>
             <li><Link to="/service-area" className="hover:text-accent">Service Area</Link></li>
             <li><Link to="/reviews" className="hover:text-accent">Reviews</Link></li>
             <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
