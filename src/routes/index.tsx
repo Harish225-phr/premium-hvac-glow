@@ -40,7 +40,6 @@ const services = [
   { icon: Flame, title: "Furnace Services", slug: "furnace-repair-beaver-falls-pa", desc: "Tune-ups, repairs, and replacements that keep your furnace running safely all winter." },
   { icon: Wind, title: "Duct Cleaning", slug: "duct-cleaning-beaver-falls-pa", desc: "Deep-clean ductwork to remove dust, allergens and contaminants for healthier air." },
   { icon: Sparkles, title: "Indoor Air Quality", slug: "indoor-air-quality-beaver-falls-pa", desc: "UV purifiers, HEPA filtration and humidity control engineered for your home." },
-  { icon: Building2, title: "Commercial HVAC", slug: "commercial-hvac-beaver-falls-pa", desc: "Rooftop units, RTU service, and preventative maintenance plans for businesses." },
   { icon: Siren, title: "Emergency HVAC", slug: "emergency-hvac-beaver-falls-pa", desc: "24/7 emergency response with no overtime fees on nights, weekends or holidays." },
 ];
 
@@ -84,6 +83,7 @@ function HomePage() {
       <Services />
       <WhyChoose />
       <Process />
+      <Commercial />
       <Reviews />
       <ServiceAreas />
       <Financing />
@@ -175,9 +175,73 @@ function Services() {
                 </Link>
               </h3>
               <p className="mt-2 text-muted-foreground leading-relaxed">{s.desc}</p>
-              <Link to="/$slug" params={{ slug: s.slug }} aria-label={`Learn more about ${s.title}`} className="mt-5 inline-flex items-center gap-1 text-teal font-semibold text-sm group">
-                Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Commercial() {
+  const points = [
+    "Rooftop unit (RTU) installation & service",
+    "Preventive maintenance contracts",
+    "Light commercial split systems",
+    "Refrigeration & make-up air",
+    "After-hours & weekend scheduling",
+    "Single point of contact for every site",
+  ];
+  const industries = ["Offices", "Retail", "Restaurants", "Warehouses", "Medical", "Property Management"];
+  return (
+    <section className="section bg-surface-soft" id="commercial">
+      <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-bold tracking-widest uppercase">
+            <Building2 className="w-3.5 h-3.5" /> Commercial HVAC Services
+          </span>
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-primary leading-tight">
+            Commercial HVAC <span className="text-gradient">Built for Uptime</span>
+          </h2>
+          <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
+            Keep your business comfortable, code-compliant and running 24/7. From single rooftop units to multi-site preventive maintenance contracts, our commercial team delivers responsive service backed by a single point of contact.
+          </p>
+          <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2">
+            {points.map(p => (
+              <li key={p} className="flex items-start gap-2 text-foreground/90">
+                <CheckCircle2 className="w-5 h-5 text-teal shrink-0 mt-0.5" /> <span>{p}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {industries.map(i => (
+              <span key={i} className="px-3 py-1 rounded-full bg-card border border-border/60 text-xs font-semibold text-primary">{i}</span>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild variant="cta" size="lg">
+              <Link to="/$slug" params={{ slug: "commercial-hvac-beaver-falls-pa" }}>
+                Explore Commercial HVAC <ArrowRight className="w-5 h-5" />
               </Link>
+            </Button>
+            <Button asChild variant="hero" size="lg">
+              <a href="tel:+14126282207"><Phone className="w-5 h-5" /> Call (412) 628-2207</a>
+            </Button>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-4">
+          {[
+            { icon: Building2, label: "Multi-Site Service", note: "One vendor, every location" },
+            { icon: Clock, label: "After-Hours Work", note: "Zero disruption to business" },
+            { icon: ShieldCheck, label: "Fully Insured", note: "$2M general liability" },
+            { icon: Siren, label: "24/7 Emergency", note: "Priority commercial dispatch" },
+          ].map(c => (
+            <Card key={c.label} className="p-6 rounded-2xl border-border/60 hover-lift">
+              <span className="w-11 h-11 rounded-xl gradient-primary text-white grid place-items-center shadow-glow">
+                <c.icon className="w-5 h-5" />
+              </span>
+              <div className="mt-4 font-bold text-primary">{c.label}</div>
+              <p className="mt-1 text-sm text-muted-foreground">{c.note}</p>
             </Card>
           ))}
         </div>
