@@ -169,9 +169,13 @@ function Services() {
               <div className="w-12 h-12 rounded-xl gradient-primary text-white grid place-items-center shadow-glow">
                 <s.icon className="w-6 h-6" />
               </div>
-              <h3 className="mt-5 text-xl font-bold text-primary">{s.title}</h3>
+              <h3 className="mt-5 text-xl font-bold">
+                <Link to="/$slug" params={{ slug: s.slug }} className="text-primary hover:text-teal transition-colors">
+                  {s.title}
+                </Link>
+              </h3>
               <p className="mt-2 text-muted-foreground leading-relaxed">{s.desc}</p>
-              <Link to="/$slug" params={{ slug: s.slug }} className="mt-5 inline-flex items-center gap-1 text-teal font-semibold text-sm group">
+              <Link to="/$slug" params={{ slug: s.slug }} aria-label={`Learn more about ${s.title}`} className="mt-5 inline-flex items-center gap-1 text-teal font-semibold text-sm group">
                 Learn more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Card>
