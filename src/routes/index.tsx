@@ -296,7 +296,7 @@ function Financing() {
   ];
   return (
     <section className="section bg-surface-soft">
-      <div className="container-px mx-auto max-w-7xl">
+      {/* <div className="container-px mx-auto max-w-7xl">
         <SectionHead eyebrow="Financing" title="Affordable Plans for Every Budget" sub="0% APR financing and flexible monthly payments make premium HVAC easy." />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {plans.map(p => (
@@ -318,7 +318,7 @@ function Financing() {
             </Card>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
