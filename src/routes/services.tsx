@@ -2,8 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/PageHero";
 import { SectionHead } from "./index";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { SERVICES } from "@/data/seo-pages";
 
 export const Route = createFileRoute("/services")({
@@ -30,11 +28,6 @@ export const Route = createFileRoute("/services")({
                   </Link>
                 </h2>
                 <p className="mt-2 text-muted-foreground">{s.intro.split(".")[0]}.</p>
-                <Button asChild variant="ghost" className="mt-4 px-0 text-teal hover:text-teal-deep">
-                  <Link to="/$slug" params={{ slug: `${s.slug}-beaver-falls-pa` }} aria-label={`Learn more about ${s.name}`}>
-                    Learn more <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </Button>
               </Card>
             ))}
           </div>
