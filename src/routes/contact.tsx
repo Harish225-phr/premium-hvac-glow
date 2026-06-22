@@ -27,7 +27,7 @@ function ContactPage() {
         <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-2 gap-12">
           <div className="space-y-5">
             {[
-              { i: Phone, l: "Phone", v: "(412) 628-2207", h: "tel:+14126282207" },
+              { i: Phone, l: "Phone", v: "(724) 676-8738", h: "tel:+17246768738" },
               { i: Mail, l: "Email", v: "info@kellerheatingandcooling.com", h: "mailto:info@kellerheatingandcooling.com" },
               { i: MapPin, l: "Service Area", v: "Pittsburgh, PA & Surrounding Areas" },
               { i: Clock, l: "Hours", v: "24/7 Emergency · Office Mon–Sat 7am–7pm" },

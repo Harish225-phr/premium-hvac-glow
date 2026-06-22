@@ -15,7 +15,7 @@ export const Route = createFileRoute("/emergency")({
   component: () => (
     <>
       <PageHero eyebrow="Emergency" title="24/7 Emergency HVAC Service" sub="No heat? No cooling? Strange smells or sounds? Call us now — real humans answering, real techs dispatched within the hour.">
-        <Button asChild variant="cta" size="xl"><a href="tel:+14126282207"><Phone className="w-5 h-5" /> Call (412) 628-2207</a></Button>
+        <Button asChild variant="cta" size="xl"><a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a></Button>
       </PageHero>
       <section className="section">
         <div className="container-px mx-auto max-w-5xl grid sm:grid-cols-3 gap-5">

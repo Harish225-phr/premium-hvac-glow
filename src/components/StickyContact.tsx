@@ -12,7 +12,7 @@ export function StickyContact() {
         <MessageCircle className="w-6 h-6" />
       </a>
       <a
-        href="tel:+14126282207"
+        href="tel:+17246768738"
         aria-label="Call now"
         className="md:hidden fixed bottom-6 left-6 z-40 grid place-items-center w-14 h-14 rounded-full gradient-accent text-accent-foreground shadow-cta animate-pulse-ring"
       >
