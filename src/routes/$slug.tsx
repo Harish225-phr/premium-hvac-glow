@@ -127,7 +127,7 @@ function LocationPage({ data }: { data: Extract<ReturnType<typeof parseSlug>, { 
     <>
       <PageHero
         eyebrow={`Serving ${location.name}, PA`}
-        title={`AC Repair and HVAC Services ${location.name}, PA`}
+        title={`AC Repair and HVAC Services in ${location.name}, PA`}
         sub={`Local, licensed and insured HVAC contractor serving ${location.name} and surrounding neighborhoods with same-day service.`}
       >
         <div className="flex flex-wrap gap-3">
