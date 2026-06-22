@@ -23,7 +23,7 @@ export const Route = createFileRoute("/$slug")({
       description = `Trusted ${service.name.toLowerCase()} in ${location.name}, ${location.state}. Licensed, insured, NATE-certified technicians · upfront pricing · 24/7 emergency service. Call (412) 628-2207.`;
     } else {
       const { location } = loaderData;
-      title = `AC Repair and HVAC Services ${location.name}, PA | Keller Heating & Cooling`;
+      title = `AC Repair and HVAC Services in ${location.name}, PA | Keller Heating & Cooling`;
       description = `Same-day AC repair and full HVAC services in ${location.name}, PA. 4.9★ · 150+ reviews · licensed & insured. Call (412) 628-2207 for fast service.`;
     }
     return {
