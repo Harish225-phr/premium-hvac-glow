@@ -105,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         "@context": "https://schema.org",
         "@type": "HVACBusiness",
         name: "Keller Heating And Cooling LLC",
-        telephone: "+1-412-628-2207",
+        telephone: "+1-724-676-8738",
         email: "info@kellerheatingandcooling.com",
         address: { "@type": "PostalAddress", addressLocality: "Pittsburgh", addressRegion: "PA", addressCountry: "US" },
         aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "150" },
