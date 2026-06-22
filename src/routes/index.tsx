@@ -488,7 +488,7 @@ function LeadForm() {
   );
 }
 
-function InfoRow({ icon: Icon, label, value, href }: { icon: any; label: string; value: string; href?: string }) {
+function InfoRow({ icon: Icon, label, value, href, target, rel }: { icon: any; label: string; value: string; href?: string; target?: string; rel?: string }) {
   const Inner = (
     <div className="flex items-start gap-4">
       <span className="w-11 h-11 rounded-xl gradient-primary text-white grid place-items-center shadow-glow shrink-0"><Icon className="w-5 h-5" /></span>
@@ -498,7 +498,7 @@ function InfoRow({ icon: Icon, label, value, href }: { icon: any; label: string;
       </div>
     </div>
   );
-  return href ? <a href={href}>{Inner}</a> : Inner;
+  return href ? <a href={href} target={target} rel={rel}>{Inner}</a> : Inner;
 }
 
 export function SectionHead({ eyebrow, title, sub, align="center" }: { eyebrow: string; title: string; sub?: string; align?: "center" | "left" }) {
