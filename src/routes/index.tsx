@@ -108,7 +108,7 @@ function Hero() {
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" /> 24/7 Emergency HVAC Service
           </span>
           <h1 className="mt-6 text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
-            Reliable HVAC Services <span className="text-gradient">You Can Trust.</span>
+            Reliable HVAC Services <span className="text-gradient">You Can Trust</span> in Beaver Falls, PA.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl">
             Professional heating, cooling, ventilation, repair, installation & maintenance services for homes and businesses across Greater Pittsburgh.
