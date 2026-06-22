@@ -123,7 +123,7 @@ function Hero() {
               <Link to="/contact">Get Free Estimate <ArrowRight className="w-5 h-5" /></Link>
             </Button>
             <Button asChild variant="hero" size="xl">
-              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call Now: (724) 676-8738</a>
+              <a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call Now: (724) 676-8738</a>
             </Button>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-4 max-w-xl">
@@ -225,7 +225,7 @@ function Commercial() {
               </Link>
             </Button>
             <Button asChild variant="hero" size="lg">
-              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738</a>
+              <a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call (724) 676-8738</a>
             </Button>
           </div>
         </div>
@@ -443,7 +443,7 @@ function CTABanner() {
             <h2 className="text-3xl md:text-5xl font-bold">Need HVAC Service Today?</h2>
             <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">Our emergency techs are standing by 24/7. No overtime fees. No surprises.</p>
             <Button asChild variant="cta" size="xl" className="mt-8">
-              <a href="tel:+17246768738"><Phone className="w-5 h-5" /> Call (724) 676-8738 Now</a>
+              <a href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5" /> Call (724) 676-8738 Now</a>
             </Button>
           </div>
         </div>
@@ -459,7 +459,7 @@ function Contact() {
         <div>
           <SectionHead align="left" eyebrow="Get In Touch" title="Request a Free Estimate" sub="Tell us about your project and we'll get back to you within 30 minutes during business hours." />
           <div className="mt-8 space-y-5">
-            <InfoRow icon={Phone} label="Phone" value="(724) 676-8738" href="tel:+17246768738" />
+            <InfoRow icon={Phone} label="Phone" value="(724) 676-8738" href="https://wa.me/17246768738" target="_blank" rel="noopener noreferrer" />
             <InfoRow icon={MapPin} label="Service Area" value="Pittsburgh, PA & Surrounding Areas" />
             <InfoRow icon={Clock} label="Business Hours" value="Mon–Sun · 24/7 Emergency Service" />
           </div>
@@ -488,7 +488,7 @@ function LeadForm() {
   );
 }
 
-function InfoRow({ icon: Icon, label, value, href }: { icon: any; label: string; value: string; href?: string }) {
+function InfoRow({ icon: Icon, label, value, href, target, rel }: { icon: any; label: string; value: string; href?: string; target?: string; rel?: string }) {
   const Inner = (
     <div className="flex items-start gap-4">
       <span className="w-11 h-11 rounded-xl gradient-primary text-white grid place-items-center shadow-glow shrink-0"><Icon className="w-5 h-5" /></span>
@@ -498,7 +498,7 @@ function InfoRow({ icon: Icon, label, value, href }: { icon: any; label: string;
       </div>
     </div>
   );
-  return href ? <a href={href}>{Inner}</a> : Inner;
+  return href ? <a href={href} target={target} rel={rel}>{Inner}</a> : Inner;
 }
 
 export function SectionHead({ eyebrow, title, sub, align="center" }: { eyebrow: string; title: string; sub?: string; align?: "center" | "left" }) {
